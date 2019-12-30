@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="MuiGrid-root makeStyles-landingContainer-1 MuiGrid-container MuiGrid-direction-xs-column"
+>
+  <div
+    className="MuiGrid-root makeStyles-titleColumn-2 MuiGrid-item"
+  >
+    <h1
+      className="MuiTypography-root MuiTypography-h1"
+      id="typeItElement"
+    />
+  </div>
+  <div
+    className="MuiGrid-root makeStyles-imgContainer-5 MuiGrid-container MuiGrid-item"
+  />
+  <div
+    className="MuiGrid-root makeStyles-paragraphColumn-3 MuiGrid-container MuiGrid-item"
+  >
+    <p
+      className="MuiTypography-root makeStyles-paragraph-4 MuiTypography-body1"
+    >
+      <b>
+        TL;DR:
+      </b>
+       Ich bringe deine IT-Projekte 
+      <i>
+        zielstrebig
+      </i>
+       und
+       
+      <i>
+        effizient
+      </i>
+       zum Erfolg.
+    </p>
+  </div>
+</div>
+`;
