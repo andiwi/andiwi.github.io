@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
 import TypeIt from "typeit";
-import { Typography } from "@material-ui/core";
+import { Typography, makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles({
+  text: {
+    wordBreak: "break-all"
+  }
+});
 
 export default function TypeItHeader() {
+  const classes = useStyles();
+
   useEffect(() => {
     new TypeIt("#typeItElement", {
       strings: [
@@ -22,5 +30,11 @@ export default function TypeItHeader() {
     }).go();
   }, []);
 
-  return <Typography variant="h1" id="typeItElement"></Typography>;
+  return (
+    <Typography
+      variant="h1"
+      id="typeItElement"
+      className={classes.text}
+    ></Typography>
+  );
 }

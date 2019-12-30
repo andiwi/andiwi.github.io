@@ -1,13 +1,20 @@
 import React from "react";
-import { CssBaseline, Grid, makeStyles, Typography } from "@material-ui/core";
+import {
+  CssBaseline,
+  Grid,
+  makeStyles,
+  Typography,
+  Fab
+} from "@material-ui/core";
 import TypeItHeader from "./components/TypeItHeader";
 import { ThemeProvider } from "@material-ui/core/styles";
+import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import Img from "react-image";
 import theme from "./theme";
 
 const useStyles = makeStyles({
   landingContainer: {
-    minHeight: "100%",
+    minHeight: "100vh",
     background:
       "linear-gradient(to top, #BAE8E8 50%, #deecdd 100%)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
     fallbacks: [
@@ -32,9 +39,6 @@ const useStyles = makeStyles({
       justifyContent: "flex-end"
     }
   },
-  paragraph: {
-    fontSize: "1.5rem"
-  },
   imgContainer: {
     marginTop: "auto",
     paddingBottom: theme.spacing(4),
@@ -48,6 +52,20 @@ const useStyles = makeStyles({
     width: "200px",
     [theme.breakpoints.up("sm")]: {
       width: "300px"
+    }
+  },
+  contactContainer: {
+    height: "100vh",
+    padding: theme.spacing(1)
+  },
+  mailTo: {
+    color: theme.palette.primary.contrastText
+  },
+  fabLarge: {
+    width: 80,
+    height: 80,
+    "& .MuiSvgIcon-root": {
+      fontSize: "2.5rem"
     }
   }
 });
@@ -66,9 +84,33 @@ export default function App() {
           <Img src="profile_400x400.jpg" className={classes.img} />
         </Grid>
         <Grid item className={classes.paragraphColumn} container>
-          <Typography variant="body1" className={classes.paragraph}>
+          <Typography variant="body1">
             <b>TL;DR:</b> Ich bringe deine IT-Projekte <i>zielstrebig</i> und{" "}
             <i>effizient</i> zum Erfolg.
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        className={classes.contactContainer}
+        direction="column"
+        justify="space-between"
+      >
+        <Typography variant="h2">
+          Hast du ein Projekt, eine App oder Idee bei der du meine Unterstützung
+          benötigen könntest? Schreibe mir eine kurze Nachricht.
+        </Typography>
+        <Grid item direction="column" container alignItems="center">
+          <Fab color="primary" className={classes.fabLarge}>
+            <EmailOutlinedIcon />
+          </Fab>
+          <Typography variant="body1" className={classes.mailTo}>
+            <a
+              className={classes.mailTo}
+              href="mailto:mail@andreaswittmann.com"
+            >
+              mail@andreaswittmann.com
+            </a>
           </Typography>
         </Grid>
       </Grid>
