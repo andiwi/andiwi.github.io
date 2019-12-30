@@ -1,26 +1,77 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { CssBaseline, Grid, makeStyles, Typography } from "@material-ui/core";
+import TypeItHeader from "./components/TypeItHeader";
+import { ThemeProvider } from "@material-ui/core/styles";
+import Img from "react-image";
+import theme from "./theme";
 
-const App: React.FC = () => {
+const useStyles = makeStyles({
+  landingContainer: {
+    minHeight: "100%",
+    background:
+      "linear-gradient(to top, #BAE8E8 50%, #deecdd 100%)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+    fallbacks: [
+      {
+        // @ts-ignore
+        background:
+          "-webkit-linear-gradient(to bottom, #BAE8E8, #deecdd)" /* Chrome 10-25, Safari 5.1-6 */
+      },
+      { background: "#BAE8E8" } /* fallback for old browsers */
+    ],
+    //backgroundImage: "url('otis-redding.png')",
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1)
+  },
+  titleColumn: {
+    paddingTop: theme.spacing(6),
+    minHeight: "200px"
+  },
+  paragraphColumn: {
+    paddingBottom: theme.spacing(6),
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "flex-end"
+    }
+  },
+  paragraph: {
+    fontSize: "1.5rem"
+  },
+  imgContainer: {
+    marginTop: "auto",
+    paddingBottom: theme.spacing(4),
+    [theme.breakpoints.up("sm")]: {
+      justifyContent: "flex-end"
+    }
+  },
+  img: {
+    borderRadius: "4px",
+    boxShadow: "0px 0px 50px 0px rgba(0,0,0,0.5)",
+    width: "200px",
+    [theme.breakpoints.up("sm")]: {
+      width: "300px"
+    }
+  }
+});
+
+export default function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Grid container className={classes.landingContainer} direction="column">
+        <Grid item className={classes.titleColumn}>
+          <TypeItHeader />
+        </Grid>
+        <Grid item container className={classes.imgContainer}>
+          <Img src="profile_400x400.jpg" className={classes.img} />
+        </Grid>
+        <Grid item className={classes.paragraphColumn} container>
+          <Typography variant="body1" className={classes.paragraph}>
+            <b>TL;DR:</b> Ich bringe deine IT-Projekte <i>zielstrebig</i> und{" "}
+            <i>effizient</i> zum Erfolg.
+          </Typography>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
   );
 }
-
-export default App;
