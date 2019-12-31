@@ -35,7 +35,7 @@ const theme = createMuiTheme({
       h1: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontWeight: "bold",
-        fontSize: "4.5rem",
+        fontSize: "4.3rem",
         [breakpoints.up("md")]: {
           fontSize: "5rem"
         },
