@@ -12,14 +12,14 @@ const useStyles = makeStyles({
   landingContainer: {
     minHeight: "100vh",
     background:
-      "linear-gradient(to top, #BAE8E8 50%, #deecdd 100%)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+      "linear-gradient( 109.6deg, #cce4f7 11.2%, rgba(237,246,250,1) 100.2% )" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
     fallbacks: [
       {
         // @ts-ignore
         background:
-          "-webkit-linear-gradient(to bottom, #BAE8E8, #deecdd)" /* Chrome 10-25, Safari 5.1-6 */
+          "-webkit-linear-gradient(109.6deg, #cce4f7 11.2%, rgba(237,246,250,1) 100.2% )" /* Chrome 10-25, Safari 5.1-6 */
       },
-      { background: "#BAE8E8" } /* fallback for old browsers */
+      { background: theme.palette.primary.main } /* fallback for old browsers */
     ],
     //backgroundImage: "url('otis-redding.png')",
     paddingLeft: theme.spacing(1),

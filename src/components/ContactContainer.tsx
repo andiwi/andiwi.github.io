@@ -40,7 +40,7 @@ export default function ContactContainer() {
       </ScrollAnimation>
       <Grid item direction="column" container alignItems="center">
         <Fab
-          color="primary"
+          color="secondary"
           className={classes.fabLarge}
           href="mailto:mail@andreaswittmann.com"
         >

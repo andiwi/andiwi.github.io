@@ -2,18 +2,17 @@ import { createMuiTheme } from "@material-ui/core";
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 const palette = {
-  //primary: { main: "#96DACD", contrastText: "#1E2226" },
   primary: {
-    main: "#b9e8e8",
-    light: "#ecffff",
-    dark: "#88b6b6",
-    contrastText: "#000000"
+    main: "#cce4f7",
+    light: "#ffffff",
+    dark: "#9bb2c4",
+    contrastText: "#08121b"
   },
   secondary: {
-    main: "#d06162",
-    light: "#ff918f",
-    dark: "#9b3238",
-    contrastText: "#000000"
+    main: "#303841",
+    light: "#5a626c",
+    dark: "#08121b",
+    contrastText: "#ffffff"
   },
   background: {
     default: "#FFFFFF"
@@ -30,6 +29,9 @@ const theme = createMuiTheme({
   },
   overrides: {
     MuiTypography: {
+      root: {
+        color: palette.secondary.dark
+      },
       h1: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontWeight: "bold",
