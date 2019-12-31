@@ -1,14 +1,8 @@
 import React from "react";
-import {
-  CssBaseline,
-  Grid,
-  makeStyles,
-  Typography,
-  Fab
-} from "@material-ui/core";
+import { CssBaseline, Grid, makeStyles, Typography } from "@material-ui/core";
 import TypeItHeader from "./components/TypeItHeader";
+import ContactContainer from "./components/ContactContainer";
 import { ThemeProvider } from "@material-ui/core/styles";
-import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import Img from "react-image";
 import theme from "./theme";
 
@@ -90,30 +84,7 @@ export default function App() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid
-        container
-        className={classes.contactContainer}
-        direction="column"
-        justify="space-between"
-      >
-        <Typography variant="h2">
-          Hast du ein Projekt, eine App oder Idee bei der du meine Unterstützung
-          benötigen könntest? Schreibe mir eine kurze Nachricht.
-        </Typography>
-        <Grid item direction="column" container alignItems="center">
-          <Fab color="primary" className={classes.fabLarge}>
-            <EmailOutlinedIcon />
-          </Fab>
-          <Typography variant="body1" className={classes.mailTo}>
-            <a
-              className={classes.mailTo}
-              href="mailto:mail@andreaswittmann.com"
-            >
-              mail@andreaswittmann.com
-            </a>
-          </Typography>
-        </Grid>
-      </Grid>
+      <ContactContainer />
     </ThemeProvider>
   );
 }
