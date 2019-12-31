@@ -1,9 +1,11 @@
 import React from "react";
 import { CssBaseline, Grid, makeStyles, Typography } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
+import Img from "react-image";
 import TypeItHeader from "./components/TypeItHeader";
 import ContactContainer from "./components/ContactContainer";
-import { ThemeProvider } from "@material-ui/core/styles";
-import Img from "react-image";
 import theme from "./theme";
 
 const useStyles = makeStyles({
@@ -74,14 +76,29 @@ export default function App() {
         <Grid item className={classes.titleColumn}>
           <TypeItHeader />
         </Grid>
+
         <Grid item container className={classes.imgContainer}>
-          <Img src="profile_400x400.jpg" className={classes.img} />
+          <ScrollAnimation
+            animateIn="fadeIn"
+            duration={0.5}
+            animateOnce={true}
+            offset={0}
+          >
+            <Img src="profile_400x400.jpg" className={classes.img} />
+          </ScrollAnimation>
         </Grid>
         <Grid item className={classes.paragraphColumn} container>
-          <Typography variant="body1">
-            <b>TL;DR:</b> Ich bringe deine IT-Projekte <i>zielstrebig</i> und{" "}
-            <i>effizient</i> zum Erfolg.
-          </Typography>
+          <ScrollAnimation
+            animateIn="fadeIn"
+            duration={0.5}
+            animateOnce={true}
+            offset={0}
+          >
+            <Typography variant="body1">
+              <b>TL;DR:</b> Ich bringe deine IT-Projekte <i>zielstrebig</i> und{" "}
+              <i>effizient</i> zum Erfolg.
+            </Typography>
+          </ScrollAnimation>
         </Grid>
       </Grid>
       <ContactContainer />

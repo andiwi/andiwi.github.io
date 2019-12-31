@@ -1,6 +1,8 @@
 import React from "react";
 import { makeStyles, Grid, Typography, Fab } from "@material-ui/core";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
 import theme from "../theme";
 
 const useStyles = makeStyles({
@@ -30,10 +32,12 @@ export default function ContactContainer() {
       direction="column"
       justify="space-between"
     >
-      <Typography variant="h2">
-        Hast du ein Projekt, eine App oder Idee bei der du meine Unterstützung
-        benötigen könntest? Schreibe mir eine kurze Nachricht.
-      </Typography>
+      <ScrollAnimation animateIn="fadeIn" duration={0.5} animateOnce={true}>
+        <Typography variant="h2">
+          Hast du ein Projekt, eine App oder Idee bei der du meine Unterstützung
+          benötigen könntest? Schreibe mir eine kurze Nachricht.
+        </Typography>
+      </ScrollAnimation>
       <Grid item direction="column" container alignItems="center">
         <Fab
           color="primary"
