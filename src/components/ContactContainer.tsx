@@ -35,7 +35,11 @@ export default function ContactContainer() {
         benötigen könntest? Schreibe mir eine kurze Nachricht.
       </Typography>
       <Grid item direction="column" container alignItems="center">
-        <Fab color="primary" className={classes.fabLarge}>
+        <Fab
+          color="primary"
+          className={classes.fabLarge}
+          href="mailto:mail@andreaswittmann.com"
+        >
           <EmailOutlinedIcon />
         </Fab>
         <Typography variant="body1" className={classes.mailTo}>
