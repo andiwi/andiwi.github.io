@@ -27,16 +27,10 @@ const useStyles = makeStyles({
     paddingTop: theme.spacing(6),
     minHeight: "200px"
   },
-  paragraphColumn: {
-    paddingBottom: theme.spacing(6),
-    [theme.breakpoints.up("sm")]: {
-      justifyContent: "flex-end"
-    }
-  },
   imgContainer: {
     marginTop: "auto",
     paddingBottom: theme.spacing(4),
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       justifyContent: "flex-end"
     }
   },
@@ -48,18 +42,15 @@ const useStyles = makeStyles({
       width: "300px"
     }
   },
-  contactContainer: {
-    height: "100vh",
-    padding: theme.spacing(1)
+  paragraphContainer: {
+    paddingBottom: theme.spacing(6),
+    [theme.breakpoints.up("md")]: {
+      justifyContent: "flex-end"
+    }
   },
-  mailTo: {
-    color: theme.palette.primary.contrastText
-  },
-  fabLarge: {
-    width: 80,
-    height: 80,
-    "& .MuiSvgIcon-root": {
-      fontSize: "2.5rem"
+  paragraph: {
+    [theme.breakpoints.up("md")]: {
+      textAlign: "end"
     }
   }
 });
@@ -82,14 +73,14 @@ export default function LandingPageContainer() {
           <Img src="profile_400x400.jpg" className={classes.img} />
         </ScrollAnimation>
       </Grid>
-      <Grid item className={classes.paragraphColumn} container>
+      <Grid item container className={classes.paragraphContainer}>
         <ScrollAnimation
           animateIn="fadeIn"
           duration={0.5}
           animateOnce={true}
           offset={0}
         >
-          <Typography variant="body1">
+          <Typography variant="body1" className={classes.paragraph}>
             <b>TL;DR:</b> Ich bringe deine IT-Projekte <i>zielstrebig</i> und{" "}
             <i>effizient</i> zum Erfolg.
           </Typography>
