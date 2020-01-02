@@ -34,8 +34,8 @@ export default function ContactContainer() {
     >
       <ScrollAnimation animateIn="fadeIn" duration={0.5} animateOnce={true}>
         <Typography variant="h2">
-          Hast du ein Projekt, eine App oder Idee bei der du meine Unterstützung
-          benötigen könntest? Schreibe mir eine kurze Nachricht.
+          Haben Sie ein Projekt, eine App oder Idee bei der Sie meine
+          Unterstützung benötigen? I'm ready!
         </Typography>
       </ScrollAnimation>
       <Grid item direction="column" container alignItems="center">

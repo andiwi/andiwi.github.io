@@ -81,7 +81,7 @@ export default function LandingPageContainer() {
           offset={0}
         >
           <Typography variant="body1" className={classes.paragraph}>
-            <b>TL;DR:</b> Ich bringe deine IT-Projekte <i>zielstrebig</i> und{" "}
+            <b>TL;DR:</b> Ich bringe Ihre IT-Projekte <i>zielstrebig</i> und{" "}
             <i>effizient</i> zum Erfolg.
           </Typography>
         </ScrollAnimation>
