@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardContent,
   Chip,
+  Grid,
   Typography
 } from "@material-ui/core";
 //import { ArrowForwardIos, ArrowBackIos } from "@material-ui/icons";
@@ -20,22 +21,6 @@ const useStyles = makeStyles({
     flex: "0 0 auto",
     display: "flex"
   },
-  horizontalScrollContainer: {
-    position: "relative",
-    width: "100%"
-  },
-  navBtnLeft: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0
-  },
-  navBtnRight: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    right: 0
-  },
   navArrowLeft: {
     marginLeft: theme.spacing(1)
   },
@@ -49,14 +34,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     margin: theme.spacing(1, 2),
-    width: "400px",
-    maxWidth: "70vw",
+    minWidth: "200px",
+    width: "75vw",
+    maxWidth: "500px",
     backgroundColor: theme.palette.primary.main
-  },
-  box: {
-    backgroundColor: "blue",
-    width: "300px",
-    margin: "10px"
   },
   chipContainer: {
     marginTop: "auto",
@@ -186,7 +167,7 @@ export default function HorizontalScroll() {
   });
 
   return (
-    <div className={classes.horizontalScrollContainer}>
+    <Grid container justify="center">
       <ScrollContainer
         className={classes.scrollContainer}
         vertical={true}
@@ -198,6 +179,6 @@ export default function HorizontalScroll() {
       >
         <div className={classes.container}>{childElements}</div>
       </ScrollContainer>
-    </div>
+    </Grid>
   );
 }

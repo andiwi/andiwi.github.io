@@ -50,7 +50,8 @@ const useStyles = makeStyles({
   },
   paragraph: {
     [theme.breakpoints.up("md")]: {
-      textAlign: "end"
+      textAlign: "end",
+      fontSize: "1.5rem"
     }
   }
 });

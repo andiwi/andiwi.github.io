@@ -52,10 +52,7 @@ const theme = createMuiTheme({
         }
       },
       body1: {
-        fontSize: "1.5rem",
-        [breakpoints.up("sm")]: {
-          fontSize: "2.5rem"
-        }
+        fontSize: "1.1rem"
       }
     },
     MuiCardHeader: {
