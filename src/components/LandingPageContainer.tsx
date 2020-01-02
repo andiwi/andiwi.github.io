@@ -25,7 +25,10 @@ const useStyles = makeStyles({
   },
   titleColumn: {
     paddingTop: theme.spacing(6),
-    minHeight: "200px"
+    minHeight: "200px",
+    [theme.breakpoints.up("md")]: {
+      minHeight: "240px"
+    }
   },
   imgContainer: {
     marginTop: "auto",
@@ -38,7 +41,7 @@ const useStyles = makeStyles({
     borderRadius: "4px",
     boxShadow: "0px 0px 50px 0px rgba(0,0,0,0.5)",
     width: "200px",
-    [theme.breakpoints.up("sm")]: {
+    [theme.breakpoints.up("md")]: {
       width: "300px"
     }
   },

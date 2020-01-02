@@ -35,7 +35,7 @@ const theme = createMuiTheme({
       h1: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontWeight: "bold",
-        fontSize: "4.3rem",
+        fontSize: "3.5rem",
         [breakpoints.up("md")]: {
           fontSize: "5rem"
         },
@@ -47,8 +47,11 @@ const theme = createMuiTheme({
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
         fontWeight: "normal",
         fontSize: "2.5rem",
-        [breakpoints.up("sm")]: {
-          fontSize: "5rem"
+        [breakpoints.up("md")]: {
+          fontSize: "3rem"
+        },
+        [breakpoints.up("xl")]: {
+          fontSize: "4rem"
         }
       },
       body1: {
