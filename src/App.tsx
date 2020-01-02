@@ -4,6 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 
 import ContactContainer from "./components/ContactContainer";
 import LandingPageContainer from "./components/LandingPageContainer";
+import ServicesContainer from "./components/ServicesContainer";
 import theme from "./theme";
 
 export default function App() {
@@ -11,6 +12,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <LandingPageContainer />
+      <ServicesContainer />
       <ContactContainer />
     </ThemeProvider>
   );
