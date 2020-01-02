@@ -1,5 +1,8 @@
 import React from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
+import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
+
 import {
   makeStyles,
   Card,
@@ -177,7 +180,13 @@ export default function HorizontalScroll() {
         }}
         hideScrollbars={false}
       >
-        <div className={classes.container}>{childElements}</div>
+        <ScrollAnimation
+          animateIn="bounceInRight"
+          duration={1}
+          animateOnce={true}
+        >
+          <div className={classes.container}>{childElements}</div>
+        </ScrollAnimation>
       </ScrollContainer>
     </Grid>
   );

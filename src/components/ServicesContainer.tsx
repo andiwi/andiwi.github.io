@@ -25,7 +25,12 @@ export default function ServicesContainer() {
       className={classes.container}
       justify="space-between"
     >
-      <ScrollAnimation animateIn="fadeIn" duration={0.5} animateOnce={true}>
+      <ScrollAnimation
+        animateIn="fadeIn"
+        duration={0.5}
+        animateOnce={true}
+        offset={0}
+      >
         <Typography variant="h2" className={classes.title}>
           Skills & Services
         </Typography>

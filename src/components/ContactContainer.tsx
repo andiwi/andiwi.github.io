@@ -32,7 +32,12 @@ export default function ContactContainer() {
       direction="column"
       justify="space-between"
     >
-      <ScrollAnimation animateIn="fadeIn" duration={0.5} animateOnce={true}>
+      <ScrollAnimation
+        animateIn="fadeIn"
+        duration={0.5}
+        animateOnce={true}
+        offset={0}
+      >
         <Typography variant="h2">
           Haben Sie ein Projekt, eine App oder Idee bei der Sie meine
           Unterstützung benötigen? I'm ready!
