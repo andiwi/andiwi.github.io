@@ -891,6 +891,14 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.3.tgz#a166882c81c0c6040975dd30df24fae8549bd96f"
   integrity sha512-14ZVlsB9akwvydAdaEnVnvqu6J2P6ySv39hYyl/aoB6w/V+bXX0tay8cF6paqbgZsN2n5Xh15uF4pE+GvE+itw==
 
+"@essentials/request-timeout@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@essentials/request-timeout/-/request-timeout-1.0.2.tgz#0fcb7d7ec186fcfc5f32685968407a2d51d6443d"
+  integrity sha512-P4pM8z1J9Ifj9SanjHyIuzV+AF/Ry6Coxm6foyza3aiDsweHME3t5sRrKv0ohpsmQLrmgt8XLlwFLPoAYLpq2Q==
+  dependencies:
+    performance-now "^2.1.0"
+    raf "^3.4.1"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -1157,6 +1165,28 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
+
+"@react-hook/debounce@^1.0.6":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@react-hook/debounce/-/debounce-1.0.9.tgz#9d245c34fcb02f3d734250fef2fb0d278d829911"
+  integrity sha512-pigv5ntAyN4VQXyQfphkYzyE6LyWPeM/D+mhuUPjKElIpb/xuiHQLMOqLsuQUQcqh2f7TBPjaE4kPVlWXPdKXA==
+  dependencies:
+    "@essentials/request-timeout" "^1.0.1"
+
+"@react-hook/throttle@^1.0.7":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@react-hook/throttle/-/throttle-1.0.10.tgz#0e3e2573c8d4f2c04e2effa2442067f2c64787c5"
+  integrity sha512-aHcnIxgqGnH2cOMYMgcYgEy3mPQ7JXgu08yp6f11TfPYxfkAt6rD+1r+Q7cP9btz+AQ2gbkNlaD/6DALVvSzZQ==
+  dependencies:
+    "@essentials/request-timeout" "^1.0.1"
+
+"@react-hook/window-size@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@react-hook/window-size/-/window-size-1.0.12.tgz#feffac908e1c0a7aa32fe5db7be262dd0dadefb4"
+  integrity sha512-Z2IlQmbCQ7fsLCvn6GnIFFE5Evz+nz1CjC0d+ZDjFnX3pfCJCLc0TlzwSDDOrjYLvqkTC29FUF6wDT6lfbyxzg==
+  dependencies:
+    "@react-hook/debounce" "^1.0.6"
+    "@react-hook/throttle" "^1.0.7"
 
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.2"

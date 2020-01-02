@@ -12,7 +12,8 @@ import {
   Grid,
   Typography
 } from "@material-ui/core";
-//import { ArrowForwardIos, ArrowBackIos } from "@material-ui/icons";
+import { useWindowWidth } from "@react-hook/window-size/throttled";
+
 import theme from "../theme";
 
 const useStyles = makeStyles({
@@ -39,8 +40,11 @@ const useStyles = makeStyles({
     margin: theme.spacing(1, 2),
     minWidth: "200px",
     width: "75vw",
-    maxWidth: "500px",
-    backgroundColor: theme.palette.primary.main
+    maxWidth: "400px",
+    backgroundColor: theme.palette.primary.main,
+    [theme.breakpoints.up("xl")]: {
+      maxWidth: "500px"
+    }
   },
   chipContainer: {
     marginTop: "auto",
@@ -53,6 +57,7 @@ const useStyles = makeStyles({
 
 export default function HorizontalScroll() {
   const classes = useStyles();
+  const width = useWindowWidth();
 
   let children: JSX.Element[] = [];
   children.push(
@@ -180,13 +185,18 @@ export default function HorizontalScroll() {
         }}
         hideScrollbars={false}
       >
-        <ScrollAnimation
-          animateIn="bounceInRight"
-          duration={1}
-          animateOnce={true}
-        >
+        {width < 1300 && (
+          <ScrollAnimation
+            animateIn="bounceInRight"
+            duration={1}
+            animateOnce={true}
+          >
+            <div className={classes.container}>{childElements}</div>
+          </ScrollAnimation>
+        )}
+        {width >= 1300 && (
           <div className={classes.container}>{childElements}</div>
-        </ScrollAnimation>
+        )}
       </ScrollContainer>
     </Grid>
   );
