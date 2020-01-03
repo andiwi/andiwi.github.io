@@ -16,7 +16,11 @@ const useStyles = makeStyles({
   card: {
     display: "flex",
     flexDirection: "column",
-    margin: theme.spacing(1, 2),
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
+    marginLeft: "2px",
+    marginRight: "2px",
+    boxShadow: "none",
     minWidth: "200px",
     width: "75vw",
     maxWidth: "400px",
@@ -77,7 +81,7 @@ export default function SkillCard(props: ISkillCardProps) {
   }
 
   return (
-    <Card className={classes.card} raised={true}>
+    <Card className={classes.card}>
       <CardHeader title={props.skill.title}></CardHeader>
       <CardContent>
         <Typography variant="body1" align="right">

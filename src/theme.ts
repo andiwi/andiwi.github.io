@@ -61,7 +61,6 @@ const theme = createMuiTheme({
     MuiCardHeader: {
       title: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
-        fontWeight: "bold",
         fontSize: "1.9rem"
       }
     },
