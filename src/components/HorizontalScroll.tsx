@@ -138,8 +138,8 @@ export default function HorizontalScroll() {
   const classes = useStyles();
   const width = useWindowWidth();
 
-  const skillCards: JSX.Element[] = skills.map(skill => {
-    return <SkillCard skill={skill} />;
+  const skillCards: JSX.Element[] = skills.map((skill, index) => {
+    return <SkillCard skill={skill} key={index} />;
   });
 
   return (
@@ -148,9 +148,6 @@ export default function HorizontalScroll() {
         className={classes.scrollContainer}
         vertical={true}
         horizontal={true}
-        onScroll={(...args: any[]) => {
-          console.log("onScroll", args);
-        }}
         hideScrollbars={false}
       >
         {width < 1300 && (
@@ -159,10 +156,16 @@ export default function HorizontalScroll() {
             duration={1}
             animateOnce={true}
           >
-            <div className={classes.container}>{skillCards}</div>
+            <div className={classes.container}>
+              <div className={classes.element}>{skillCards}</div>
+            </div>
           </ScrollAnimation>
         )}
-        {width >= 1300 && <div className={classes.container}>{skillCards}</div>}
+        {width >= 1300 && (
+          <div className={classes.container}>
+            <div className={classes.element}>{skillCards}</div>
+          </div>
+        )}
       </ScrollContainer>
     </Grid>
   );

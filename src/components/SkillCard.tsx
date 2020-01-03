@@ -35,10 +35,10 @@ const useStyles = makeStyles({
 });
 
 export interface ISkill {
-  title: String;
+  title: string;
   descriptionShort: JSX.Element;
   descriptionExtension?: JSX.Element;
-  tags: String[];
+  tags: string[];
 }
 
 interface ISkillCardProps {
@@ -88,7 +88,12 @@ export default function SkillCard(props: ISkillCardProps) {
         <Typography variant="body2">Technology Stack</Typography>
         {props.skill.tags.map(tag => {
           return (
-            <Chip label={tag} color="secondary" className={classes.chip} />
+            <Chip
+              label={tag}
+              key={tag}
+              color="secondary"
+              className={classes.chip}
+            />
           );
         })}
       </div>
