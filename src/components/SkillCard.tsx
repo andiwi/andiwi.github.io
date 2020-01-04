@@ -58,6 +58,7 @@ export default function SkillCard(props: ISkillCardProps) {
 
   let description: JSX.Element = props.skill.descriptionShort;
 
+  let showTags: boolean = true; //always show tags if there is no descriptionExtension
   if (props.skill.descriptionExtension) {
     if (isExpanded) {
       //combine short description with extended description
@@ -67,6 +68,7 @@ export default function SkillCard(props: ISkillCardProps) {
           {props.skill.descriptionExtension}
         </>
       );
+      showTags = true;
     } else {
       //show short description
       description = (
@@ -75,6 +77,7 @@ export default function SkillCard(props: ISkillCardProps) {
           <Button onClick={handleClick}>weiterlesen</Button>
         </>
       );
+      showTags = false;
     }
   }
 
@@ -86,19 +89,21 @@ export default function SkillCard(props: ISkillCardProps) {
           {description}
         </Typography>
       </CardContent>
-      <div className={classes.chipContainer}>
-        <Typography variant="body2">Technology Stack</Typography>
-        {props.skill.tags.map(tag => {
-          return (
-            <Chip
-              label={tag}
-              key={tag}
-              color="secondary"
-              className={classes.chip}
-            />
-          );
-        })}
-      </div>
+      {showTags && (
+        <div className={classes.chipContainer}>
+          <Typography variant="body2">Technology Stack</Typography>
+          {props.skill.tags.map(tag => {
+            return (
+              <Chip
+                label={tag}
+                key={tag}
+                color="secondary"
+                className={classes.chip}
+              />
+            );
+          })}
+        </div>
+      )}
     </Card>
   );
 }
