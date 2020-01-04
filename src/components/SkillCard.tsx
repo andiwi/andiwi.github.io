@@ -16,15 +16,13 @@ const useStyles = makeStyles({
   card: {
     display: "flex",
     flexDirection: "column",
-    marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(1),
-    marginLeft: "2px",
-    marginRight: "2px",
-    boxShadow: "none",
+    margin: theme.spacing(2, 1),
     minWidth: "200px",
     width: "75vw",
     maxWidth: "400px",
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: "#F8FBFE",
+    boxShadow: "0px 2px 5px 2px rgba(204, 228, 247, 0.7)",
+    borderRadius: "4px",
     [theme.breakpoints.up("xl")]: {
       maxWidth: "500px"
     }
