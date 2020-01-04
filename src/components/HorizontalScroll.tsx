@@ -18,33 +18,8 @@ const useStyles = makeStyles({
     flex: "0 0 auto",
     display: "flex"
   },
-  navArrowLeft: {
-    marginLeft: theme.spacing(1)
-  },
-  navArrowRight: {
-    marginRight: theme.spacing(1)
-  },
   scrollContainer: {
     padding: theme.spacing(2, 0)
-  },
-  card: {
-    display: "flex",
-    flexDirection: "column",
-    margin: theme.spacing(1, 2),
-    minWidth: "200px",
-    width: "75vw",
-    maxWidth: "400px",
-    backgroundColor: theme.palette.primary.main,
-    [theme.breakpoints.up("xl")]: {
-      maxWidth: "500px"
-    }
-  },
-  chipContainer: {
-    marginTop: "auto",
-    padding: theme.spacing(3)
-  },
-  chip: {
-    margin: "1px"
   }
 });
 
