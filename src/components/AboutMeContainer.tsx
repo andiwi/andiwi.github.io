@@ -7,7 +7,7 @@ import theme from "../theme";
 
 const useStyles = makeStyles({
   container: {
-    height: "100vh",
+    minHeight: "100vh",
     padding: theme.spacing(1)
   },
   contactContainer: {
