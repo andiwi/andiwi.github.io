@@ -54,8 +54,25 @@ const theme = createMuiTheme({
           fontSize: "4rem"
         }
       },
+      h3: {
+        fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: "normal",
+        fontSize: "2rem",
+        [breakpoints.up("md")]: {
+          fontSize: "2.5rem"
+        },
+        [breakpoints.up("xl")]: {
+          fontSize: "3rem"
+        }
+      },
       body1: {
-        fontSize: "1.1rem"
+        fontSize: "1.1rem",
+        [breakpoints.up("md")]: {
+          fontSize: "1.3rem"
+        },
+        [breakpoints.up("xl")]: {
+          fontSize: "1.5rem"
+        }
       }
     },
     MuiCardHeader: {
