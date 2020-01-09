@@ -4,7 +4,7 @@ import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 const palette = {
   primary: {
     main: "#cce4f7",
-    light: "#ffffff",
+    light: "#F8FBFE",
     dark: "#9bb2c4",
     contrastText: "#08121b"
   },
@@ -88,6 +88,27 @@ const theme = createMuiTheme({
         "&:hover": {
           backgroundColor: palette.primary.main
         }
+      }
+    },
+    MuiPaper: {
+      root: {
+        color: palette.primary.contrastText
+      },
+      elevation1: {
+        boxShadow: "0px 2px 5px 2px rgba(204, 228, 247, 0.7)",
+        borderRadius: "4px"
+      }
+    },
+    MuiExpansionPanel: {
+      root: {
+        "&:before": {
+          backgroundColor: "transparent"
+        }
+      }
+    },
+    MuiExpansionPanelSummary: {
+      root: {
+        backgroundColor: palette.primary.main
       }
     }
   }

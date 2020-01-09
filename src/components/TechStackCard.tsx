@@ -13,9 +13,6 @@ const useStyles = makeStyles({
     minWidth: "200px",
     width: "75vw",
     maxWidth: "400px",
-    //backgroundColor: "#F8FBFE",
-    boxShadow: "0px 2px 5px 2px rgba(204, 228, 247, 0.7)",
-    borderRadius: "4px",
     [theme.breakpoints.up("xl")]: {
       maxWidth: "500px"
     }
