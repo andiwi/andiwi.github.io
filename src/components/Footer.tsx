@@ -35,7 +35,7 @@ export default function Footer() {
       <Grid item xs={6} container alignItems="center" justify="flex-end">
         <Typography variant="body2">
           <Link to="/impressum" className={classes.link}>
-            Impressum
+            Impressum & Datenschutz
           </Link>
         </Typography>
       </Grid>
