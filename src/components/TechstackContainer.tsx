@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, Grid, Typography } from "@material-ui/core";
+import { makeStyles, Grid, Hidden, Typography } from "@material-ui/core";
 import ScrollContainer from "react-indiana-drag-scroll";
 import ScrollAnimation from "react-animate-on-scroll";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
@@ -126,7 +126,9 @@ export default function TechstackContainer() {
       <Grid container justify="center">
         {content}
       </Grid>
-      <Grid item></Grid>
+      <Hidden smDown>
+        <Grid item></Grid>
+      </Hidden>
     </Grid>
   );
 }
