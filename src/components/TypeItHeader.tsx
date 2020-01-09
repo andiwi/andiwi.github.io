@@ -20,13 +20,13 @@ export default function TypeItHeader() {
         "Entrepreneur",
         "Andreas </br> Wittmann"
       ],
-      speed: 70,
+      speed: 30,
       lifeLike: true,
       cursor: true,
       breakLines: false,
       loop: false,
       waitUntilVisible: false,
-      nextStringDelay: 1100
+      nextStringDelay: 1000
     }).go();
   }, []);
 
