@@ -85,7 +85,7 @@ export default function LandingPageContainer() {
           offset={0}
         >
           <Typography variant="body1" className={classes.paragraph}>
-            Gemeinsam bringen wir deine Ideen und Projekte zum Erfolg.{" "}
+            Gemeinsam bringen wir deine Ideen und IT Projekte zum Erfolg.{" "}
             <span role="img" aria-label="flexed biceps">
               💪
             </span>
