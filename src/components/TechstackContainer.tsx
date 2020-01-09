@@ -52,6 +52,7 @@ const aiTags = [
   "Tensorflow",
   "PyTorch",
   "Scikit-learn",
+  "Conda",
   "Deep Learning",
   "Neural Networks",
   "Random Forests",
@@ -59,8 +60,7 @@ const aiTags = [
   "Gradient Boosting",
   "Principal Component Analysis (PCA)",
   "Image Processing",
-  "Semantic Segmentation",
-  "Conda"
+  "Semantic Segmentation"
 ];
 
 const blockchainTags = [
