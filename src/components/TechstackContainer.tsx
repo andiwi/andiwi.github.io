@@ -21,27 +21,45 @@ const useStyles = makeStyles({
 
 const webTags = [
   "Typescript",
+  "Javascript (ES5/ES6/ES7)",
   "CSS3",
+  "HTML5",
   "React",
+  "JSS",
+  "SCSS",
   "Redux",
   "GraphQL",
+  "Next.js",
   "Node.js",
   "Express.js",
   "MongoDB",
-  "SQL",
+  "PostgreSQL",
   "Docker",
   "NPM & Yarn",
+  "NGINX",
   "Continious Integration",
+  "Jenkins",
   "API Development",
+  "RESTful",
   "Microservices"
 ];
 
 const aiTags = [
   "Python",
-  "Numpy",
+  "NumPy",
+  "Matplotlib",
+  "Keras",
   "Tensorflow",
   "PyTorch",
   "Scikit-learn",
+  "Deep Learning",
+  "Neural Networks",
+  "Random Forests",
+  "Support Vector Machines (SVM)",
+  "Gradient Boosting",
+  "Principal Component Analysis (PCA)",
+  "Image Processing",
+  "Semantic Segmentation",
   "Conda"
 ];
 
@@ -51,7 +69,9 @@ const blockchainTags = [
   "Web3",
   "Metamask",
   "Exchange Connections",
-  "dApp Development"
+  "dApp Development",
+  "Smart Contracts",
+  "Ethereum"
 ];
 
 export default function TechstackContainer() {
