@@ -9,7 +9,7 @@ import ContactElement from "./ContactElement";
 const useStyles = makeStyles({
   container: {
     minHeight: "100vh",
-    padding: theme.spacing(1)
+    padding: theme.spacing(4, 1)
   }
 });
 

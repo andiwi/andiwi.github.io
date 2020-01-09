@@ -18,12 +18,8 @@ import theme from "../theme";
 const useStyles = makeStyles({
   container: {
     minHeight: "100vh",
-    padding: theme.spacing(1, 0)
-  },
-  title: {
-    padding: theme.spacing(0, 1)
-  },
-  heading: {}
+    padding: theme.spacing(4, 1)
+  }
 });
 
 export default function ServicesContainer() {
@@ -41,7 +37,7 @@ export default function ServicesContainer() {
         <>Mit diesen Schritten bringen wir dein Projekt zum Erfolg</>
       </SectionHeader>
 
-      <Grid item xs={11} md={10} lg={8}>
+      <Grid item xs={12} md={10} lg={8}>
         <ScrollAnimation
           animateIn="fadeIn"
           duration={0.5}
@@ -54,9 +50,7 @@ export default function ServicesContainer() {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              <Typography className={classes.heading}>
-                1. Erstgespräch und Kennenlernen
-              </Typography>
+              <Typography>1. Erstgespräch und Kennenlernen</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Typography>
@@ -75,9 +69,7 @@ export default function ServicesContainer() {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography className={classes.heading}>
-                2. Start des Projekts
-              </Typography>
+              <Typography>2. Start des Projekts</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Typography>
@@ -96,9 +88,7 @@ export default function ServicesContainer() {
               aria-controls="panel3-content"
               id="panel3-header"
             >
-              <Typography className={classes.heading}>
-                3. Agile Sprints
-              </Typography>
+              <Typography>3. Agile Sprints</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Typography>
@@ -115,9 +105,7 @@ export default function ServicesContainer() {
               aria-controls="panel4-content"
               id="panel4-header"
             >
-              <Typography className={classes.heading}>
-                4. Launch time!
-              </Typography>
+              <Typography>4. Launch time!</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
               <Typography>
