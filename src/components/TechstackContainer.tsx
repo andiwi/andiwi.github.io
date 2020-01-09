@@ -5,6 +5,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import { useWindowWidth } from "@react-hook/window-size/throttled";
 import "animate.css/animate.min.css";
 import TechStackCard from "./TechStackCard";
+import SectionHeader from "./SectionHeader";
 import theme from "../theme";
 
 const useStyles = makeStyles({
@@ -106,23 +107,17 @@ export default function TechstackContainer() {
       className={classes.container}
       direction="column"
       justify="space-between"
+      alignItems="center"
     >
-      <Grid item xs={11} md={10} lg={8}>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          duration={0.5}
-          animateOnce={true}
-          offset={0}
-        >
-          <Typography variant="h2">
-            Du bist einer von uns{" "}
-            <span role="img" aria-label="nerd">
-              🤓
-            </span>
-            und möchtest meinen Techstack kennenlernen? Voilà:
-          </Typography>
-        </ScrollAnimation>
-      </Grid>
+      <SectionHeader>
+        <>
+          Du bist einer von uns{" "}
+          <span role="img" aria-label="nerd">
+            🤓
+          </span>{" "}
+          und möchtest meinen Techstack kennenlernen? Voilà:
+        </>
+      </SectionHeader>
       <Grid container justify="center">
         {content}
       </Grid>

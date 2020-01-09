@@ -4,6 +4,7 @@ import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import theme from "../theme";
+import SectionHeader from "./SectionHeader";
 
 const useStyles = makeStyles({
   container: {
@@ -35,19 +36,11 @@ export default function ContactContainer() {
       className={classes.container}
       direction="column"
       justify="space-between"
+      alignItems="center"
     >
-      <Grid item xs={11} md={10} lg={8}>
-        <ScrollAnimation
-          animateIn="fadeIn"
-          duration={0.5}
-          animateOnce={true}
-          offset={0}
-        >
-          <Typography variant="h2">
-            Alles Spanisch für dich? No hay problema!
-          </Typography>
-        </ScrollAnimation>
-      </Grid>
+      <SectionHeader>
+        <>Alles Spanisch für dich? No hay problema!</>
+      </SectionHeader>
       <Typography variant="body1" align="center">
         <b>TL;DR</b> Gemeinsam bringen wir deine Ideen und IT Projekte zum
         Erfolg.{" "}
