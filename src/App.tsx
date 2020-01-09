@@ -5,13 +5,13 @@ import { ThemeProvider } from "@material-ui/core/styles";
 
 import Home from "./pages/Home";
 import Impressum from "./pages/Impressum";
+import ScrollToTop from "./components/ScrollToTop";
 import theme from "./theme";
 
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
       <Router>
         <Switch>
           <Route path="/impressum">
@@ -21,6 +21,7 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+        <ScrollToTop />
       </Router>
     </ThemeProvider>
   );
