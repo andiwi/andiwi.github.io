@@ -6,18 +6,22 @@ import "animate.css/animate.min.css";
 import theme from "../theme";
 
 const useStyles = makeStyles({
-  contactContainer: {
-    height: "100vh",
+  container: {
+    minHeight: "100vh",
     padding: theme.spacing(1)
+  },
+  contactContainer: {
+    marginTop: theme.spacing(4)
   },
   mailTo: {
     color: theme.palette.primary.contrastText
   },
   fabLarge: {
-    width: 80,
-    height: 80,
+    marginTop: theme.spacing(1),
+    width: 65,
+    height: 65,
     "& .MuiSvgIcon-root": {
-      fontSize: "2.5rem"
+      fontSize: "2rem"
     }
   }
 });
@@ -28,22 +32,37 @@ export default function ContactContainer() {
   return (
     <Grid
       container
-      className={classes.contactContainer}
+      className={classes.container}
       direction="column"
       justify="space-between"
     >
-      <ScrollAnimation
-        animateIn="fadeIn"
-        duration={0.5}
-        animateOnce={true}
-        offset={0}
+      <Grid item xs={11} md={10} lg={8}>
+        <ScrollAnimation
+          animateIn="fadeIn"
+          duration={0.5}
+          animateOnce={true}
+          offset={0}
+        >
+          <Typography variant="h2">
+            Alles Spanisch für dich? No hay problema!
+          </Typography>
+        </ScrollAnimation>
+      </Grid>
+      <Typography variant="body1" align="center">
+        <b>TL;DR</b> Gemeinsam bringen wir deine Ideen und IT Projekte zum
+        Erfolg.{" "}
+        <span role="img" aria-label="flexed biceps">
+          💪
+        </span>
+      </Typography>
+      <Grid
+        item
+        direction="column"
+        container
+        alignItems="center"
+        className={classes.contactContainer}
       >
-        <Typography variant="h2">
-          Haben Sie ein Projekt, eine App oder Idee bei der Sie meine
-          Unterstützung benötigen? I'm ready!
-        </Typography>
-      </ScrollAnimation>
-      <Grid item direction="column" container alignItems="center">
+        <Typography variant="h3">Let's talk!</Typography>
         <Fab
           color="secondary"
           className={classes.fabLarge}
