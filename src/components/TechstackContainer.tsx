@@ -37,8 +37,8 @@ const webTags = [
   "Docker",
   "NPM & Yarn",
   "NGINX",
-  "Continious Integration",
   "Jenkins",
+  "Continuous Integration",
   "API Development",
   "RESTful",
   "Microservices"
@@ -48,6 +48,7 @@ const aiTags = [
   "Python",
   "NumPy",
   "Matplotlib",
+  "OpenCV",
   "Keras",
   "Tensorflow",
   "PyTorch",
@@ -58,8 +59,10 @@ const aiTags = [
   "Random Forests",
   "Support Vector Machines (SVM)",
   "Gradient Boosting",
-  "Principal Component Analysis (PCA)",
+  "PCA",
   "Image Processing",
+  "Object Recognition",
+  "Object Detection",
   "Semantic Segmentation"
 ];
 
@@ -68,6 +71,7 @@ const blockchainTags = [
   "Truffle",
   "Web3",
   "Metamask",
+  "Infura",
   "Exchange Connections",
   "dApp Development",
   "Smart Contracts",
