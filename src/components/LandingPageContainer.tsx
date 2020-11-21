@@ -30,14 +30,14 @@ const useStyles = makeStyles({
     minHeight: "200px",
     [theme.breakpoints.up("md")]: {
       minHeight: "240px",
-  },
+    },
   },
   imgContainer: {
     marginTop: "auto",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.up("md")]: {
       justifyContent: "flex-end",
-  },
+    },
   },
   img: {
     borderRadius: "4px",
@@ -76,7 +76,7 @@ export default function LandingPageContainer() {
           animateOnce={true}
           offset={0}
         >
-          <Img src="profile_400x400.jpg" className={classes.img} />
+          <Img src="profile_300x300.jpg" className={classes.img} />
         </ScrollAnimation>
       </Grid>
       <Grid item container className={classes.paragraphContainer}>
