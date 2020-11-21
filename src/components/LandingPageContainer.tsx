@@ -15,48 +15,50 @@ const useStyles = makeStyles({
       {
         // @ts-ignore
         background:
-          "-webkit-linear-gradient(109.6deg, #cce4f7 11.2%, rgba(237,246,250,1) 100.2% )" /* Chrome 10-25, Safari 5.1-6 */
+          "-webkit-linear-gradient(109.6deg, #cce4f7 11.2%, rgba(237,246,250,1) 100.2% )" /* Chrome 10-25, Safari 5.1-6 */,
       },
-      { background: theme.palette.primary.main } /* fallback for old browsers */
+      {
+        background: theme.palette.primary.main,
+      } /* fallback for old browsers */,
     ],
     //backgroundImage: "url('otis-redding.png')",
     paddingLeft: theme.spacing(1),
-    paddingRight: theme.spacing(1)
+    paddingRight: theme.spacing(1),
   },
   titleColumn: {
     paddingTop: theme.spacing(6),
     minHeight: "200px",
     [theme.breakpoints.up("md")]: {
-      minHeight: "240px"
-    }
+      minHeight: "240px",
+  },
   },
   imgContainer: {
     marginTop: "auto",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.up("md")]: {
-      justifyContent: "flex-end"
-    }
+      justifyContent: "flex-end",
+  },
   },
   img: {
     borderRadius: "4px",
     boxShadow: "0px 0px 50px 0px rgba(0,0,0,0.5)",
     width: "200px",
     [theme.breakpoints.up("md")]: {
-      width: "300px"
-    }
+      width: "300px",
+    },
   },
   paragraphContainer: {
     paddingBottom: theme.spacing(6),
     [theme.breakpoints.up("md")]: {
-      justifyContent: "flex-end"
-    }
+      justifyContent: "flex-end",
+    },
   },
   paragraph: {
     [theme.breakpoints.up("md")]: {
       textAlign: "end",
-      fontSize: "1.5rem"
-    }
-  }
+      fontSize: "1.5rem",
+    },
+  },
 });
 
 export default function LandingPageContainer() {
